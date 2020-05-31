@@ -1,0 +1,210 @@
+{
+  "conv1" : {
+      "requires" : null,
+      "conflicts": null,
+      "next" : "conv2",
+       "start": {
+           "speaker" : "homer",
+           "display": "is the dialog just not long enough to see the differece in the click button showing up or is it just flat out not working so i'm rambling here to check",
+           "next": "sec2",
+           "type" : "conv"
+
+       },
+
+       "sec2": {
+           "speaker" : "minerva",
+           "display" : "fuck you homer",
+           "next" : "sec3",
+           "type" : "conv",
+           "choices" :{ 
+              "A" : {
+                  "text" : "choice A",
+                  "target" : "choiceA"
+              },
+              "B" :{
+                  "text" : "choice B",
+                  "target" : "choiceB"
+              }
+             }
+       },
+
+       "sec3": {
+           "speaker" : "neptune",
+           "display" : "what did you say about me you little bitch ill have you know i graduated",
+           "type" : "choice",
+           "choices" :{ 
+               "A" : {
+                   "text" : "choice A",
+                   "target" : "choiceA"
+               },
+               "B" :{
+                   "text" : "choice B",
+                   "target" : "choiceB"
+               }
+              }
+       },
+
+       "choiceA" : {
+          "speaker" : "minerva",
+          "display" : "you made choice A",
+          "next" : "sec4",
+          "type" : "conv"
+       },
+
+       "choiceB" : {
+          "speaker" : "neptune",
+          "display" : "you made choice B",
+          "next" : "sec4",
+          "type" : "conv"
+       },
+
+       "sec4" : {
+          "speaker" : "neptune",
+          "display" : "have another choice",
+          "next" : "end",
+          "type" : "choice",
+          "choices" :{ 
+              "A" : {
+                  "text" : "choice C",
+                  "target" : "choiceC"
+              },
+              "B" :{
+                  "text" : "choice D",
+                  "target" : "choiceD"
+              }
+             }
+       },
+
+       
+       "choiceC" : {
+          "speaker" : "neptune",
+          "display" : "you made choice C",
+          "next" : "end",
+          "type" : "conv"
+       },
+
+       
+       "choiceD" : {
+          "speaker" : "neptune",
+          "display" : "you made choice D",
+          "next" : "end",
+          "type" : "conv"
+       },
+
+       "end": {
+           "type" : "end"
+       }
+      
+  },
+
+  "conv2" : {
+      "requires" : ["choiceC", "choiceA"],
+      "conflicts" : null,
+      "next" : "conv3",
+      "start": {
+          "speaker" : "homer",
+          "display": "yaaaaaaaaaaaaaaaaaaaaaaaay you made it to a part you can only get to if the requirements are fulfilled",
+          "next": "sec2",
+          "type" : "conv"
+
+      },
+
+      "sec2": {
+          "speaker" : "minerva",
+          "display" : "im so proud of you",
+          "next" : "sec3",
+          "type" : "conv"
+      },
+
+      "sec3": {
+          "speaker" : "neptune",
+          "display" : "what did you say about me you little bitch ill have you know i graduated",
+          "type" : "choice",
+          "choices" :{ 
+              "A" : {
+                  "text" : "choice2A",
+                  "target" : "choice2A"
+              },
+              "B" :{
+                  "text" : "choice2B",
+                  "target" : "choice2B"
+              }
+             }
+      },
+
+      "choice2A" : {
+         "speaker" : "minerva",
+         "display" : "you made choice 2A",
+         "next" : "end",
+         "type" : "conv"
+      },
+
+      "choice2B" : {
+         "speaker" : "neptune",
+         "display" : "you made choice 2B",
+         "next" : "end",
+         "type" : "conv"
+      },
+
+      "end": {
+          "type" : "end"
+      }
+     
+ },
+
+ "conv3" : {
+  "requires" : ["choiceC"],
+  "conflicts": ["choice2A"],
+  "next" : null,
+  "start": {
+      "speaker" : "homer",
+      "display": "if you chose 2A you shouldn't be here.",
+      "next": "sec2",
+      "type" : "conv"
+
+  },
+
+  "sec2": {
+      "speaker" : "minerva",
+      "display" : "you better have not chosen 2A",
+      "next" : "sec3",
+      "type" : "conv"
+  },
+
+  "sec3": {
+      "speaker" : "neptune",
+      "display" : "what did you say about me you little bitch ill have you know i graduated",
+      "type" : "choice",
+      "choices" :{ 
+          "A" : {
+              "text" : "choice3A",
+              "target" : "choice3A"
+          },
+          "B" :{
+              "text" : "choice3B",
+              "target" : "choice3B"
+          }
+         }
+  },
+
+  "choice3A" : {
+     "speaker" : "minerva",
+     "display" : "you made choice 3A",
+     "next" : "end",
+     "type" : "conv"
+  },
+
+  "choice3B" : {
+     "speaker" : "neptune",
+     "display" : "you made choice 3B",
+     "next" : "end",
+     "type" : "conv"
+  },
+
+  "end": {
+      "type" : "endOfDay"
+  }
+ 
+}
+
+}

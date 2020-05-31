@@ -1,0 +1,488 @@
+{
+    "conv1": {
+      "requires": null,
+      "conflicts": null,
+      "next": "conv2",
+      "start": {
+        "speaker": "toby",
+        "display": "Hey there, listeners, this is Tobias \"The Brain\" Weaver coming at you LIVE from Atlas, Arizona, here to fill YOUR evening with the best tunes a scientist at the bottom of the ocean could ever hope for!",
+        "next": "sec2",
+        "type": "conv"
+      },
+      "sec2": {
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "Hey, Toby.",
+            "target": "heyToby"
+          },
+          "B": {
+            "text": "Wow! A private broadcast with my FAVORITE DJ!",
+            "target": "favDJ"
+          }
+        }
+      },
+      "favDJ": {
+        "speaker": "ingram",
+        "display": "Wow! A private broadcast with my FAVORITE DJ!",
+        "next": "favDJ.1",
+        "type": "conv"
+      },
+      "favDJ.1": {
+        "speaker": "toby",
+        "display": "Hey there, caller! What's your name? Nah, I'm just kidding. This signal only has two ends.",
+        "next": "sec3",
+        "type": "conv"
+      },
+      "heyToby": {
+        "speaker": "ingram",
+        "display": "Hey, Toby.",
+        "next": "heyToby.1",
+        "type": "conv"
+      },
+      "heyToby.1": {
+        "speaker": "toby",
+        "display": "I can feel your excitement. I'm the best underwater DJ there is, and you know it.",
+        "next": "heyToby.choice",
+        "type": "conv"
+      },
+      "heyToby.choice": {
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "But you're not underwater.",
+            "target": "notUnder"
+          },
+          "B": {
+            "text": "I guess if you're the *only* underwater DJ...",
+            "target": "onlyDJ"
+          }
+        }
+      },
+      "onlyDJ": {
+        "speaker": "ingram",
+        "display": "I guess if you're the *only* underwater DJ...",
+        "next": "onlyDJ2",
+        "type": "conv"
+      },
+      "onlyDJ2": {
+        "speaker": "toby",
+        "display": "Hey!",
+        "next": "sec3",
+        "type": "conv"
+      },
+      "notUnder": {
+        "speaker": "ingram",
+        "display": "But you're not underwater.",
+        "next": "notUnder.1",
+        "type": "conv"
+      },
+      "notUnder.1": {
+        "speaker": "toby",
+        "display": "But I *am* the only radio broadcaster to be broadcasting to the bottom of the ocean. That makes me an underwater DJ. Let me live my dream.",
+        "next": "sec3",
+        "type": "conv"
+      },
+      "sec3": {
+        "speaker": "toby",
+        "display": "Anyway, as you can probably tell, I'm kind of excited that we get to use the radios. I always knew my passion for HAM would pay off eventually.",
+        "next": "sec3.choice",
+        "type": "conv"
+      },
+      "sec3.choice": {
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "It's too bad about the wifi, though.",
+            "target": "noWifi"
+          },
+          "B": {
+            "text": "Yeah, it is kind of fun.",
+            "target": "radioFun"
+          }
+        }
+      },
+      "noWifi": {
+        "speaker": "ingram",
+        "display": "It's too bad about the wifi, though. I'm just relieved that it's holding up enough to send the data through. Being able to see other people's faces definitely makes being down here more bearable, though.",
+        "next": "sec4",
+        "type": "conv"
+      },
+      "radioFun": {
+        "speaker": "ingram",
+        "display": "Yeah, it is kind of fun. I'm grateful that they're here at all. I'd probably go crazy without anyone to talk to down here.",
+        "next": "sec4",
+        "type": "conv"
+      },
+      "sec4": {
+        "speaker": "toby",
+        "display": "Yeah... I still wish I could be there.",
+        "next": "sec4.choice",
+        "type": "conv"
+      },
+      "sec4.choice": {
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "Don't worry about it.",
+            "target": "dontWorry"
+          },
+          "B": {
+            "text": "I wish you could be here, too.",
+            "target": "wishYou"
+          }
+        }
+      },
+      "dontWorry": {
+        "speaker": "ingram",
+        "display": "Don't worry about it. I'll get your data for you.",
+        "next": "dontWorry.re",
+        "type": "conv"
+      },
+      "dontWorry.re": {
+        "speaker": "toby",
+        "display": "I appreciate it, Ingram.",
+        "next": "cont",
+        "type": "conv"
+      },
+      "wishYou": {
+        "speaker": "ingram",
+        "display": "I wish you could be here, too.",
+        "next": "wishYou.re",
+        "type": "conv"
+      },
+      "wishYou.re": {
+        "speaker": "toby",
+        "display": "But wishful thinking gets us nowhere. *You're* down there, so you better get me all of that juicy ocean gossip!",
+        "next": "cont",
+        "type": "conv"
+      },
+      "cont": {
+        "speaker": "toby",
+        "display": "I'm kind of miffed that it took the rest of the drones so long to arrive - like, what would they have done if I *was* down there? Would I have just sat around doing *nothing* all day?",
+        "next": "cont1",
+        "type": "conv"
+      },
+      "cont1": {
+        "speaker": "ingram",
+        "display": "I feel you, buddy. But they're here now.",
+        "next": "cont2",
+        "type": "conv"
+      },
+      "cont2": {
+        "speaker": "toby",
+        "display": "Yeah, yeah. And Geneva will have our heads if we don't deliver the results.",
+        "next": "cont2.choice",
+        "type": "conv"
+      },
+      "cont2.choice": {
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "I'm sure we'll be fine.",
+            "target": "beFine"
+          },
+          "B": {
+            "text": "Agreed.",
+            "target": "agreed"
+          }
+        }
+      },
+      "agreed": {
+        "speaker": "ingram",
+        "display": "Agreed. So let's get this party started.",
+        "next": "cont3",
+        "type": "conv"
+      },
+      "beFine": {
+        "speaker": "ingram",
+        "display": "I'm sure we'll be fine. We've got these brand new drones, and still like two weeks to collect enough samples.",
+        "next": "beFine.re",
+        "type": "conv"
+      },
+      "beFine.re": {
+        "speaker": "toby",
+        "display": "I hope it's enough time... Moving on...",
+        "next": "cont3",
+        "type": "conv"
+      },
+      "cont3": {
+        "speaker": "toby",
+        "display": "Do they look okay, though? If those stupid beaurecrats skimped on padding because it was *\"too expensive\"* I'm gonna be pissed.",
+        "next": "cont4",
+        "type": "conv"
+      },
+      "cont4": {
+        "speaker": "ingram",
+        "display": "They look fine as far as I can tell.",
+        "next": "cont5",
+        "type": "conv"
+      },
+      "cont5": {
+        "speaker": "toby",
+        "display": "They had better. The last time I was down there I cleared a space by my bunk to set up the charging stations. Do you see it? It's the big shelf.",
+        "next": "cont6",
+        "type": "conv"
+      },
+      "cont6": {
+        "speaker": "ingram",
+        "display": "Um... hang on. I can't move the radio. I'll be right back, I'm gonna go take a look.",
+        "next": "cont7",
+        "type": "conv"
+      },
+      "cont7": {
+        "speaker": "toby",
+        "display": "I'll be here.",
+        "next": "cont7.1",
+        "type": "conv"
+      },
+      "cont7.1": {
+        "speaker": "toby",
+        "display": "...",
+        "next": "cont8",
+        "type": "conv"
+      },
+      "cont8": {
+        "speaker": "ingram",
+        "display": "Toby...",
+        "next": "cont9",
+        "type": "conv"
+      },
+      "cont9": {
+        "speaker": "toby",
+        "display": "Yes?",
+        "next": "cont10",
+        "type": "conv"
+      },
+      "cont10": {
+        "speaker": "ingram",
+        "display": "Did you *name* the drones?",
+        "next": "cont11",
+        "type": "conv"
+      },
+      "cont11": {
+        "speaker": "toby",
+        "display": "...Maybe.",
+        "next": "cont12",
+        "type": "conv"
+      },
+      "cont12": {
+        "speaker": "ingram",
+        "display": "What happened to not counting your chickens before they've hatched? We only got okayed to get more drones a few months ago!",
+        "next": "cont13",
+        "type": "conv"
+      },
+      "cont13": {
+        "speaker": "toby",
+        "display": "I wanted to be ready! All ten of my little babies asleep by their mother... This is the closest to parenthood I'm ever going to get! Anyway, just get their chargers set up properly.",
+        "next": "cont14",
+        "type": "conv"
+      },
+      "cont14": {
+        "speaker": "ingram",
+        "display": "I am, I am.",
+        "next": "cont15",
+        "type": "conv"
+      },
+      "cont15": {
+        "speaker": "ingram",
+        "display": "...",
+        "next": "cont16",
+        "type": "conv"
+      },
+      "cont16": {
+        "speaker": "ingram",
+        "display": "Which box are the replacement chargers in?",
+        "next": "cont17",
+        "type": "conv"
+      },
+      "cont17": {
+        "speaker": "toby",
+        "display": "Why would I know? They sent them straight from the manufacturer. (muttering)...stupid metalheads... I can't believe they sent the wrong chargers last time. It's their own product! We couldn't even use the drones that *were* there. Pathetic.",
+        "next": "cont18",
+        "type": "conv"
+      },
+      "cont18": {
+        "speaker": "ingram",
+        "display": "(muttering)... is this it?",
+        "next": "cont19",
+        "type": "conv"
+      },
+      "cont19": {
+        "speaker": "toby",
+        "display": "Hold it up to the camera.",
+        "next": "cont20",
+        "type": "conv"
+      },
+      "cont20": {
+        "speaker": "toby",
+        "display": "...Wait. HA! Radio.",
+        "next": "cont21",
+        "type": "conv"
+      },
+      "cont21": {
+        "speaker": "ingram",
+        "display": "...No, this one is empty, too. Hey, Toby?",
+        "next": "cont23",
+        "type": "conv"
+      },
+      "cont23": {
+        "speaker": "toby",
+        "display": "Yeah?",
+        "next": "cont24",
+        "type": "conv"
+      },
+      "cont24": {
+        "speaker": "ingram",
+        "display": "They're not here.",
+        "next": "cont25",
+        "type": "conv"
+      },
+      "cont25": {
+        "speaker": "toby",
+        "display": "...",
+        "next": "cont26",
+        "type": "conv"
+      },
+      "cont26": {
+        "speaker": "ingram",
+        "display": "...Toby?",
+        "next": "cont27",
+        "type": "conv"
+      },
+      "cont27": {
+        "speaker": "toby",
+        "display": "...stupid... godda...",
+        "next": "cont28",
+        "type": "conv"
+      },
+      "cont28": {
+        "speaker": "blank",
+        "display": "(There are sounds of static and muffled cursing, and then what sounds like a surprised yell.)",
+        "next": "cont29",
+        "type": "conv"
+      },
+      "cont29": {
+        "speaker": "ingram",
+        "display": "...Toby? Are you okay? What happened?",
+        "next": "cont30",
+        "type": "conv"
+      },
+      "cont30": {
+        "speaker": "toby",
+        "display": "I'm... Eugh... I was chewing on a pen and it burst in my mouth... Blech... Just... set up the charging stations that are there and I'll be back in a few minutes to give you the rundown of how to operate the drones.",
+        "next": "cont31",
+        "type": "conv"
+      },
+      "cont31": {
+        "speaker": "toby",
+        "display": "I need to go rinse out my mouth...",
+        "next": "end",
+        "type": "conv"
+      },
+      "end": {
+        "type": "end"
+      }
+    },
+    "conv2": {
+      "requires": [
+        "choiceC",
+        "choiceA"
+      ],
+      "conflicts": null,
+      "next": "conv3",
+      "start": {
+        "speaker": "toby",
+        "display": "yaaaaaaaaaaaaaaaaaaaaaaaay you made it to a part you can only get to if the requirements are fulfilled",
+        "next": "sec2",
+        "type": "conv"
+      },
+      "sec2": {
+        "speaker": "ingram",
+        "display": "im so proud of you",
+        "next": "sec3",
+        "type": "conv"
+      },
+      "sec3": {
+        "speaker": "blank",
+        "display": "what did you say about me you little bitch ill have you know i graduated",
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "choice2A",
+            "target": "choice2A"
+          },
+          "B": {
+            "text": "choice2B",
+            "target": "choice2B"
+          }
+        }
+      },
+      "choice2A": {
+        "speaker": "ingram",
+        "display": "you made choice 2A",
+        "next": "end",
+        "type": "conv"
+      },
+      "choice2B": {
+        "speaker": "blank",
+        "display": "you made choice 2B",
+        "next": "end",
+        "type": "conv"
+      },
+      "end": {
+        "type": "end"
+      }
+    },
+    "conv3": {
+      "requires": [
+        "choiceC"
+      ],
+      "conflicts": [
+        "choice2A"
+      ],
+      "next": null,
+      "start": {
+        "speaker": "toby",
+        "display": "if you chose 2A you shouldn't be here.",
+        "next": "sec2",
+        "type": "conv"
+      },
+      "sec2": {
+        "speaker": "ingram",
+        "display": "you better have not chosen 2A",
+        "next": "sec3",
+        "type": "conv"
+      },
+      "sec3": {
+        "speaker": "blank",
+        "display": "what did you say about me you little bitch ill have you know i graduated",
+        "type": "choice",
+        "choices": {
+          "A": {
+            "text": "choice3A",
+            "target": "choice3A"
+          },
+          "B": {
+            "text": "choice3B",
+            "target": "choice3B"
+          }
+        }
+      },
+      "choice3A": {
+        "speaker": "ingram",
+        "display": "you made choice 3A",
+        "next": "end",
+        "type": "conv"
+      },
+      "choice3B": {
+        "speaker": "blank",
+        "display": "you made choice 3B",
+        "next": "end",
+        "type": "conv"
+      },
+      "end": {
+        "type": "endOfDay"
+      }
+    }
+  }
